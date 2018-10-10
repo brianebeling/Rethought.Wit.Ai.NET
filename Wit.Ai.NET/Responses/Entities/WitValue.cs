@@ -4,7 +4,6 @@ namespace Wit.Ai.NET.Responses.Entities
 {
     public class WitValue
     {
-        [JsonProperty("value")]
-        public string Value { get; set; }
+        [JsonProperty("value")] public string Value { get; set; }
     }
 }

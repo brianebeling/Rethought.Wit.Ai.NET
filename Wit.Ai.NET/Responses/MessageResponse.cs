@@ -10,11 +10,9 @@ namespace Wit.Ai.NET.Responses
         public IDictionary<string, IReadOnlyList<JObject>> Entities { get; set; } =
             new Dictionary<string, IReadOnlyList<JObject>>();
 
-        [JsonProperty("msg_id")]
-        public string MessageId { get; set; }
+        [JsonProperty("msg_id")] public string MessageId { get; set; }
 
-        [JsonProperty("_text")]
-        public string Text { get; set; }
+        [JsonProperty("_text")] public string Text { get; set; }
 
         public IReadOnlyList<JObject> GetIntents()
         {

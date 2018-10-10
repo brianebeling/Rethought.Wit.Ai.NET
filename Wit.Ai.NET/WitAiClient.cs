@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Wit.Ai.NET.Responses;
 
 #endregion
@@ -21,6 +20,18 @@ namespace Wit.Ai.NET
         {
             this.httpClient = httpClient;
             this.builder = builder;
+        }
+
+        public async Task<MessageResponse> GetMeaning(string message)
+        {
+            //if (message.Length < 1 || message.Length >= 256) return null;
+
+            var request = await Request<MessageResponse>(
+                builder.Build(
+                    ApiEndPoints.Message,
+                    new List<IParameter> {new Parameter("q", message)})).ConfigureAwait(false);
+
+            return request;
         }
 
         public static WitAiClient Create(HttpClient httpClient, string token, string version = "20170307")
@@ -42,22 +53,13 @@ namespace Wit.Ai.NET
 
         public async Task<MessageResponse> GetMeaning(string message, bool verbose)
         {
+            // TODO Verbose
             //if (message.Length < 1 || message.Length >= 256) return null;
 
             var request = await Request<MessageResponse>(
                 builder.Build(
-                    ApiEndPoints.Message, new List<IParameter> {new Parameter("q", message)}));
-
-            return request;
-        }
-
-        public async Task<MessageResponse> GetMeaning(string message)
-        {
-            //if (message.Length < 1 || message.Length >= 256) return null;
-
-            var request = await Request<MessageResponse>(
-                builder.Build(
-                    ApiEndPoints.Message, new List<IParameter> {new Parameter("q", message)}));
+                    ApiEndPoints.Message,
+                    new List<IParameter> {new Parameter("q", message)})).ConfigureAwait(false);
 
             return request;
         }
@@ -65,9 +67,9 @@ namespace Wit.Ai.NET
 
         private async Task<T> Request<T>(string request)
         {
-            var respone = await httpClient.GetAsync(request);
+            var response = await httpClient.GetAsync(request).ConfigureAwait(false);
 
-            var responseText = await respone.Content.ReadAsStringAsync();
+            var responseText = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
             Console.WriteLine(responseText);
 

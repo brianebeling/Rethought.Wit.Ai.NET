@@ -6,11 +6,9 @@ namespace Wit.Ai.NET.Responses.Entities
     {
         public static readonly string Name = "messagebody";
 
-        [JsonProperty("body")]
-        public string Body { get; set; }
+        [JsonProperty("body")] public string Body { get; set; }
 
 
-        [JsonProperty("value")]
-        public string Value { get; set; }
+        [JsonProperty("value")] public string Value { get; set; }
     }
 }

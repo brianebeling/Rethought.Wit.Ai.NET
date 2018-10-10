@@ -7,17 +7,13 @@ namespace Wit.Ai.NET.Responses.Entities.WitDurationEntity
     {
         public const string Name = "duration";
 
-        [JsonProperty("normalized")]
-        public DurationNormalized Normalized { get; set; }
+        [JsonProperty("normalized")] public DurationNormalized Normalized { get; set; }
 
-        [JsonProperty("type")]
-        public string Type { get; set; }
+        [JsonProperty("type")] public string Type { get; set; }
 
-        [JsonProperty("unit")]
-        public string Unit { get; set; }
+        [JsonProperty("unit")] public string Unit { get; set; }
 
-        [JsonProperty("value")]
-        public long Value { get; set; }
+        [JsonProperty("value")] public long Value { get; set; }
 
         public TimeSpan ToTimeSpan()
         {

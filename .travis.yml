@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 2.0.0
+dotnet: 2.1.402
 dist: trusty
 sudo: required
 
@@ -15,6 +15,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - cd Wit.Ai.NET/bin/Release && dotnet nuget push *.nupkg --source $NUGET_FEEDURL
+  - cd Wit.Ai.NET/bin/Release && dotnet nuget push *.nupkg --source $NUGET_FEEDURL --api-key $NUGET_APIKEY
   on:
     branch: master
