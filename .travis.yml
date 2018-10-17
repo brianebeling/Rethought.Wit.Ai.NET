@@ -15,6 +15,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - cd Wit.Ai.NET/bin/Release && dotnet nuget push *.nupkg --source $NUGET_FEEDURL --api-key $NUGET_APIKEY
+  - cd Rethought.Wit.Ai.NET/bin/Release && dotnet nuget push *.nupkg --source $NUGET_FEEDURL --api-key $NUGET_APIKEY
   on:
     branch: master
