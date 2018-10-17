@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Wit.Ai.NET.Responses;
+using Rethought.Wit.Ai.NET.Responses;
 
-namespace Wit.Ai.NET
+namespace Rethought.Wit.Ai.NET
 {
     public interface INaturalLanguageProcessor
     {

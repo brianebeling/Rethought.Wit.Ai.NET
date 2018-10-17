@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Wit.Ai.NET.Responses;
+using Rethought.Wit.Ai.NET.Responses;
 
 #endregion
 
-namespace Wit.Ai.NET
+namespace Rethought.Wit.Ai.NET
 {
     public class WitAiClient : INaturalLanguageProcessor
     {

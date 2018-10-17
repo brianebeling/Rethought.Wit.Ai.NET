@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Wit.Ai.NET.Responses
+namespace Rethought.Wit.Ai.NET.Responses
 {
     public class MessageResponse
     {

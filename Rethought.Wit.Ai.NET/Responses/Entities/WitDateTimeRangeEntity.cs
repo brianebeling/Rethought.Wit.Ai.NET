@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Wit.Ai.NET.Responses.Entities
+namespace Rethought.Wit.Ai.NET.Responses.Entities
 {
     public class WitDateTimeRangeEntity : Entity
     {

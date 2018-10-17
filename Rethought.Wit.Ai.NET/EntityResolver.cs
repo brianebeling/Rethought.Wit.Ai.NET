@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Optional;
-using Wit.Ai.NET.Responses;
-using Wit.Ai.NET.Responses.Entities;
+using Rethought.Wit.Ai.NET.Responses;
+using Rethought.Wit.Ai.NET.Responses.Entities;
 
-namespace Wit.Ai.NET
+namespace Rethought.Wit.Ai.NET
 {
     public class EntityResolver : IEntityResolver
     {

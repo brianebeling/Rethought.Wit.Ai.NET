@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Wit.Ai.NET.Responses.Entities.WitDurationEntity
+namespace Rethought.Wit.Ai.NET.Responses.Entities.WitDurationEntity
 {
     public class DurationNormalized : Entity
     {

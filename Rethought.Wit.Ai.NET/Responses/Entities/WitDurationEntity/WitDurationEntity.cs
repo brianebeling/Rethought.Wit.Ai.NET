@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Wit.Ai.NET.Responses.Entities.WitDurationEntity
+namespace Rethought.Wit.Ai.NET.Responses.Entities.WitDurationEntity
 {
     public class WitDurationEntity : Entity
     {

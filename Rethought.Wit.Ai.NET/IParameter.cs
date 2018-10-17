@@ -1,4 +1,4 @@
-﻿namespace Wit.Ai.NET
+﻿namespace Rethought.Wit.Ai.NET
 {
     public interface IParameter
     {

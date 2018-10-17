@@ -5,7 +5,7 @@ using System.Linq;
 
 #endregion
 
-namespace Wit.Ai.NET
+namespace Rethought.Wit.Ai.NET
 {
     public class RequestUrlBuilder : IRequestUrlBuilder
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 #endregion
 
-namespace Wit.Ai.NET
+namespace Rethought.Wit.Ai.NET
 {
     public interface IRequestUrlBuilder
     {
