@@ -53,14 +53,12 @@ namespace Rethought.Wit.Ai.NET
 
     public class WitAiClient
     {
-        private readonly WitAiTrainingClient witAiTrainingClient;
-
         private WitAiClient(WitAiTrainingClient witAiTrainingClient)
         {
-            this.witAiTrainingClient = witAiTrainingClient;
+            this.Training = witAiTrainingClient;
         }
 
-        public WitAiTrainingClient Training { get; set; }
+        public WitAiTrainingClient Training { get; }
 
         public static WitAiClient Create(HttpClient httpClient, string token, string version = "20170307")
         {
